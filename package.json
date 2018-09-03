@@ -1,0 +1,23 @@
+{
+  "name": "fitst-koa",
+  "version": "1.0.0",
+  "description": "for test",
+  "main": "app.js",
+  "dependencies": {
+    "art-template": "^4.12.2",
+    "koa": "^2.5.2",
+    "koa-art-template": "^1.1.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "less-plugin-clean-css": "^1.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "koa"
+  ],
+  "author": "xiaolin",
+  "license": "ISC"
+}

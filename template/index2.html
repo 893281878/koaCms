@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <title>art-template</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="plugs/layui/css/layui.css">
+
+</head>
+
+<body>
+<div class="main">
+    {{include 'leftMenu.html'}}
+    <div class="right">
+        <span class="layui-breadcrumb">
+          <a href="/">首页</a>
+          <a href="/demo/">演示</a>
+          <a><cite>导航元素</cite></a>
+        </span>
+        <iframe src="" frameborder="0"></iframe>
+    </div>
+</div>
+<!--引入js文件-->
+<script src="plugs/layui/layui.js"></script>
+<script>
+	//一般直接写在一个js文件中
+	layui.use(['layer', 'element'], function () {
+		var layer = layui.layer
+			, element = layui.element;
+		//监听导航点击
+		element.on('nav(demo)', function (elem) {
+			//console.log(elem)
+			layer.msg(elem.text());
+		});
+	});
+</script>
+</body>
+
+</html>
