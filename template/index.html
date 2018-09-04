@@ -2,8 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=no">
     <title>layout 后台大布局 - Layui</title>
+    <link rel="stylesheet" href="css/base.min.css">
     <link rel="stylesheet" href="plugs/layui/css/layui.css">
 </head>
 <body class="layui-layout-body">
@@ -48,14 +49,38 @@
 
     <div class="layui-body content">
         <div class="sonNav">
-            <span class="layui-breadcrumb">
-              <a href="/">首页</a>
-              <a href="/demo/">演示</a>
-              <a><cite>导航元素</cite></a>
+           <span class="layui-breadcrumb" lay-separator="—">
+              <a href="">首页</a>
+              <a href="">国际新闻</a>
+              <a href="">亚太地区</a>
+              <a><cite>正文</cite></a>
             </span>
         </div>
         <!-- 内容主体区域 -->
-        <iframe id="rightContent" src="default" frameborder="0"></iframe>
+        <!--<iframe id="rightContent" width="100%" src="default" frameborder="0"></iframe>-->
+        <div class="layui-tab" lay-filter="demo" lay-allowclose="true">
+            <ul class="layui-tab-title">
+                <li class="layui-this" lay-id="11">网站设置</li>
+                <li lay-id="22">用户管理</li>
+                <li lay-id="33">权限分配</li>
+                <li lay-id="44">商品管理</li>
+                <li lay-id="55">订单管理</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">内容1</div>
+                <div class="layui-tab-item">内容2</div>
+                <div class="layui-tab-item">内容3</div>
+                <div class="layui-tab-item">内容4</div>
+                <div class="layui-tab-item">内容5</div>
+            </div>
+        </div>
+        <div class="site-demo-button" style="margin-bottom: 0;">
+            <button class="layui-btn site-demo-active" data-type="tabAdd">新增Tab项</button>
+            <button class="layui-btn site-demo-active" data-type="tabDelete">删除：商品管理</button>
+            <button class="layui-btn site-demo-active" data-type="tabChange">切换到：用户管理</button>
+        </div>
+
+        
     </div>
 
     <div class="layui-footer">
