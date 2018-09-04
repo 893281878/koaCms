@@ -1,4 +1,12 @@
-body .layui-body .sonNav {
-  padding: 15px !important;
-  margin: 15px !important;
+body .layui-body .content {
+  padding: 10px !important;
+}
+body .layui-body .addpaddlef {
+  padding: 0 10px;
+}
+body .layui-body .addpaddlef li:first-child i {
+  display: none;
+}
+body .layui-body .layui-tab-item iframe {
+  width: 100%;
 }

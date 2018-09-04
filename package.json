@@ -9,7 +9,8 @@
     "koa-art-template": "^1.1.1",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
-    "less-plugin-clean-css": "^1.5.1"
+    "less-plugin-clean-css": "^1.5.1",
+    "mongodb": "^3.1.4"
   },
   "devDependencies": {},
   "scripts": {

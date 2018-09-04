@@ -43,44 +43,23 @@
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-            {{include 'leftMenu.html'}}
+            {{include 'nav.html'}}
         </div>
     </div>
 
     <div class="layui-body content">
-        <div class="sonNav">
-           <span class="layui-breadcrumb" lay-separator="—">
-              <a href="">首页</a>
-              <a href="">国际新闻</a>
-              <a href="">亚太地区</a>
-              <a><cite>正文</cite></a>
-            </span>
-        </div>
         <!-- 内容主体区域 -->
         <!--<iframe id="rightContent" width="100%" src="default" frameborder="0"></iframe>-->
-        <div class="layui-tab" lay-filter="demo" lay-allowclose="true">
-            <ul class="layui-tab-title">
-                <li class="layui-this" lay-id="11">网站设置</li>
-                <li lay-id="22">用户管理</li>
-                <li lay-id="33">权限分配</li>
-                <li lay-id="44">商品管理</li>
-                <li lay-id="55">订单管理</li>
+        <div class="layui-tab" lay-filter="admin" lay-allowclose="true">
+            <ul class="layui-tab-title addpaddlef">
+                <li class="layui-this" lay-id="66">默认页面</li>
             </ul>
             <div class="layui-tab-content">
-                <div class="layui-tab-item layui-show">内容1</div>
-                <div class="layui-tab-item">内容2</div>
-                <div class="layui-tab-item">内容3</div>
-                <div class="layui-tab-item">内容4</div>
-                <div class="layui-tab-item">内容5</div>
+                <div class="layui-tab-item layui-show">
+                    <iframe src="default" frameborder="0"></iframe>
+                </div>
             </div>
         </div>
-        <div class="site-demo-button" style="margin-bottom: 0;">
-            <button class="layui-btn site-demo-active" data-type="tabAdd">新增Tab项</button>
-            <button class="layui-btn site-demo-active" data-type="tabDelete">删除：商品管理</button>
-            <button class="layui-btn site-demo-active" data-type="tabChange">切换到：用户管理</button>
-        </div>
-
-        
     </div>
 
     <div class="layui-footer">
@@ -88,23 +67,9 @@
         © layui.com - 底部固定区域
     </div>
 </div>
-<script src="plugs/jquery-3.3.1.min.js"></script>
+<!--<script src="plugs/jquery-3.3.1.min.js"></script>-->
 <script src="plugs/layui/layui.js"></script>
-<script>
-	layui.use(['element','layer'], function(){
 
-		var element = layui.element,//导航的hover效果、二级菜单等功能，需要依赖element模块
-          layer = layui.layer;
-		//监听导航点击
-		element.on('nav(demo)', function(elem){
-			if(elem.attr('data-page')){
-                $("#rightContent").attr("src",elem.attr('data-page'))
-            }else {
-				layer.msg('为设置跳转页面')
-            }
-			// layer.msg(elem.text());
-		});
-	});
-</script>
+<script src="js/nav.js"></script>
 </body>
 </html>
