@@ -4,6 +4,7 @@ const Router = require('koa-router')
 const render = require('koa-art-template')
 const path = require('path')
 const serve = require('koa-static')
+const dbClient = require('./module/db')
 // const router = render('module/router')
 //实例化
 const app = new Koa()
@@ -23,7 +24,9 @@ router.get('/index', async (ctx)=>{
   ctx.body = ' 这是一个首页模板'
 })
 router.get('/', async (ctx)=>{
-  ctx.body= '这是首页'
+  var result = await dbClient.find('numbers',{})
+	console.log(result);
+	ctx.body= '这是首页'
   // 通过art-template 将数据渲染到指定的模板页面 render
    await ctx.render('index.html',{})
 })
