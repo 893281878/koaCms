@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=no">
     <title>layout 后台大布局 - Layui</title>
-    <link rel="stylesheet" href="css/base.min.css">
-    <link rel="stylesheet" href="plugs/layui/css/layui.css">
+    {{include 'comm/commCss.html'}}
 </head>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
         <div class="layui-logo">layui 后台布局</div>
-        <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
             <li class="layui-nav-item"><a href="">控制台</a></li>
             <li class="layui-nav-item"><a href="">商品管理</a></li>
@@ -49,14 +45,13 @@
 
     <div class="layui-body content">
         <!-- 内容主体区域 -->
-        <!--<iframe id="rightContent" width="100%" src="default" frameborder="0"></iframe>-->
         <div class="layui-tab" lay-filter="admin" lay-allowclose="true">
             <ul class="layui-tab-title addpaddlef">
-                <li class="layui-this" lay-id="66">默认页面</li>
+                <li class="layui-this" lay-id="0">默认页面</li>
             </ul>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
-                    <iframe src="default" frameborder="0"></iframe>
+                    <iframe lay-id="0" src="default" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
@@ -67,9 +62,7 @@
         © layui.com - 底部固定区域
     </div>
 </div>
-<!--<script src="plugs/jquery-3.3.1.min.js"></script>-->
 <script src="plugs/layui/layui.js"></script>
-
 <script src="js/nav.js"></script>
 </body>
 </html>

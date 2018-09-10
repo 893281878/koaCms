@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>后台主页</title>
+    {{include 'comm/commCss.html'}}
+</head>
+<body>
+<h1>这是后台默认主页</h1>
+{{each list}}
+{{$value}} -{{$index}} <br/>
+{{/each}}
+</body>
+</html>
