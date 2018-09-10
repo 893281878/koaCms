@@ -1,0 +1,41 @@
+.createCollection{
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  fieldset{
+    margin: 2.2rem 0;
+    width: 100%;
+  }
+  .baseInfo{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    .layui-form-item{
+      min-width: 50%;
+    }
+  }
+  .fields{
+    width: 100%;
+    .field_item{
+      padding: 0 .9rem;
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: flex-start;
+      border-bottom: 1px dashed #e2e2e2;
+      .layui-form-item{
+        margin-right: .5rem;
+        &:last-child{
+          margin-right: 0;
+        }
+        .layui-inline{
+          margin-bottom: 0;
+        }
+      }
+      .layui-input-block{
+        margin-left: 0;
+      }
+    }
+  }
+}
