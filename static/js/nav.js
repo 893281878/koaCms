@@ -13,8 +13,8 @@ layui.use(['element','layer'], function(){
 					title: elem.text()
 					,content: '<iframe lay-id="'+elem.attr("lay-id")+'" src="'+elem.attr('data-page')+'" frameborder="0"></iframe>'
 					,id: elem.attr('lay-id')
-				})
-				active.tabChange(elem)
+				});
+				active.tabChange(elem);
 				elem.attr('data-type','tabChange')
 			}
 		}
@@ -22,7 +22,7 @@ layui.use(['element','layer'], function(){
 			//删除指定Tab项
 			// console.log(elem);
 			element.tabDelete('admin',elem.attr('lay-id')); //删除：某个“Table”
-			elem.attr('data-type','tabAdd')
+			elem.attr('data-type','tabAdd');
 			elem.addClass('layui-btn-disabled');
 
 		}
@@ -41,7 +41,7 @@ layui.use(['element','layer'], function(){
 	element.tabChange('admin', layid);
 	element.on('tab(admin)', function(elem){
 		location.hash = 'page='+ $(this).attr('lay-id');
-	})
+	});
 	/**
 	 * 监听Tab 关闭事件
 	 */

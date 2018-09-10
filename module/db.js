@@ -56,9 +56,9 @@ class Db{
 	insert(collectionName,json){
 		return new Promise((resolve,reject)=>{
 			this.connect().then((db)=>{
-				db.collection(collectionName).insertMany(json,function (err,result) {
+				db.collection(collectionName).insertOne(json,function (err,result) {
 					if(err){
-						reject(err)
+						reject(err);
 						return;
 					}
 					resolve(result)
@@ -78,7 +78,7 @@ class Db{
 			this.connect().then((db)=>{
 				db.collection(collectionName).deleteMany(json,function (err,result) {
 					if(err){
-						reject(err)
+						reject(err);
 						return
 					}
 					resolve(result)
@@ -100,7 +100,7 @@ class Db{
 			this.connect().then((db)=>{
 				db.collection(collectionName).updateMany(json1,{$set:updataJson},(err,result)=>{
 					if (err){
-						reject(err)
+						reject(err);
 						return;
 					}
 					resolve(result)
