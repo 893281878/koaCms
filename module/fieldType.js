@@ -1,0 +1,4 @@
+var fieldTypes = {
+	Array:[],
+
+}

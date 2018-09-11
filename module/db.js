@@ -121,7 +121,7 @@ class Db{
 
 			this.connect().then((db)=>{
 
-				var result=db.collection(collectionName).find(json);
+				var result=db.collection(collectionName).find(json).sort({'id':1});
 
 				result.toArray(function(err,docs){
 
