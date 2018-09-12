@@ -8,6 +8,8 @@
     "jquery": "^3.3.1",
     "koa": "^2.5.2",
     "koa-art-template": "^1.1.1",
+    "koa-convert": "^1.2.0",
+    "koa-docs": "^2.1.0",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "less-plugin-clean-css": "^1.5.1",
