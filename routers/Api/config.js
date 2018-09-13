@@ -1,6 +1,12 @@
 const router = require('koa-router')();
 const mongoDB = require('../../module/db')
 
+/**
+ * 获取数据库字段可设置的类型
+ * @param method: 'get'
+ * @param path: '/setFieldType'
+ * @param meta: ''
+ */
 router.get('/setFieldType',async (ctx)=>{
 	// ctx.status = 200
 	let result = await mongoDB.find('fields_type',{});

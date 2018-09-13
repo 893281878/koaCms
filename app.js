@@ -46,7 +46,7 @@ app.use(async (ctx,next) => {
 		await ctx.render('comm/404')
 	}
 	await next();
-	console.log(ctx.url,ctx.status);
+	// console.log(ctx.url,ctx.status);
 });
 
 
@@ -63,15 +63,6 @@ router.use('/default',index.routes());
 router.use('/detail',detail.routes());
 router.use('/api',api.routes());
 
-app.use(convert(docs.get('/api', {
-	title: 'API数据接口',
-	version: '1.0.0',
-	theme: 'Paper',
-	// routeHandlers: 'disabled',
-	groups: [
-		{ groupName: '基本配置信息', routes: []},
-	]
-})));
 //启动路由
 app.use(router.routes()).use(router.allowedMethods());
 
