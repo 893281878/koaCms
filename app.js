@@ -5,10 +5,8 @@ const render = require('koa-art-template');
 const path = require('path');
 const serve = require('koa-static');
 const mongoDB = require('./module/db');
-// const swaggerUi = require("swagger-decorator");
+// const SwaggerRouter = require("koa-swagger-decorator");
 
-const docs = require('koa-docs');
-const convert = require('koa-convert');
 
 //实例化
 const app = new Koa();
@@ -25,15 +23,6 @@ render(app, {
   extname: '.html',
   debug: process.env.NODE_ENV !== 'production'
 });
-
-// //配置swaggerUi中间件
-// wrappingKoaRouter(router, "localhost:8080", "/api", {
-// 	title: "Node Server Boilerplate",
-// 	version: "0.0.1",
-// 	description: "Koa2, koa-router,Webpack"
-// });
-
-
 
 
 // Koa.use('/',function()) 应用级中间件 在匹配路由之前执行
@@ -62,6 +51,10 @@ router.use('/admin',admin.routes());
 router.use('/default',index.routes());
 router.use('/detail',detail.routes());
 router.use('/api',api.routes());
+
+
+
+
 
 //启动路由
 app.use(router.routes()).use(router.allowedMethods());
